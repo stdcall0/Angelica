@@ -2,6 +2,14 @@ plugins {
     id("com.gtnewhorizons.gtnhconvention")
 }
 
+repositories {
+    maven {
+        url = uri("https://nexus.gtnewhorizons.com/repository/public/")
+    }
+    maven("https://jitpack.io")
+    mavenCentral()
+}
+
 minecraft {
     extraRunJvmArguments.add("-Dangelica.enableTestBlocks=true")
     extraRunJvmArguments.add("-Dangelica.dumpClass=true")
