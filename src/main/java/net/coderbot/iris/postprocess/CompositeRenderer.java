@@ -206,6 +206,7 @@ public class CompositeRenderer {
 				passWidth = target.getWidth();
 				passHeight = target.getHeight();
 			}
+            // Avoid crashes when the game window is minimized
             if (passWidth <= 0 || passHeight <= 0) {
                 return;
             }
